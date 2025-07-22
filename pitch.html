@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Taha Nasreddine Kerroum - Data Science Immersion Program</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: #333;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .slide {
+            background: white;
+            border-radius: 15px;
+            padding: 40px;
+            margin: 30px 0;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+            min-height: 80vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            page-break-after: always;
+        }
+
+        .slide h1 {
+            color: #4a5568;
+            font-size: 2.5em;
+            margin-bottom: 20px;
+            text-align: center;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .slide h2 {
+            color: #2d3748;
+            font-size: 2em;
+            margin-bottom: 25px;
+            border-bottom: 3px solid #667eea;
+            padding-bottom: 10px;
+        }
+
+        .slide h3 {
+            color: #4a5568;
+            font-size: 1.4em;
+            margin: 20px 0 10px 0;
+        }
+
+        .intro-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            align-items: center;
+        }
+
+        .intro-text {
+            font-size: 1.2em;
+            line-height: 1.6;
+        }
+
+        .intro-stats {
+            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+            padding: 30px;
+            border-radius: 10px;
+            color: white;
+            text-align: center;
+        }
+
+        .intro-stats h3 {
+            color: white;
+            margin-bottom: 15px;
+        }
+
+        .academic-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+            margin-top: 20px;
+        }
+
+        .academic-card {
+            background: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%);
+            padding: 25px;
+            border-radius: 10px;
+            border-left: 5px solid #667eea;
+        }
+
+        .skills-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 15px;
+        }
+
+        .skill-tag {
+            background: #667eea;
+            color: white;
+            padding: 8px 15px;
+            border-radius: 20px;
+            font-size: 0.9em;
+            font-weight: 500;
+        }
+
+        .project-grid {
+            display: grid;
+            gap: 25px;
+            margin-top: 20px;
+        }
+
+        .project-card {
+            background: linear-gradient(135deg, #ffecd2 0%, #fcb69f 100%);
+            padding: 25px;
+            border-radius: 10px;
+            border-left: 5px solid #f093fb;
+        }
+
+        .project-card h3 {
+            color: #2d3748;
+            margin-bottom: 10px;
+        }
+
+        .project-tools {
+            background: rgba(255,255,255,0.3);
+            padding: 10px;
+            border-radius: 5px;
+            margin: 10px 0;
+            font-weight: bold;
+        }
+
+        .motivation-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+            margin-top: 20px;
+        }
+
+        .motivation-card {
+            background: linear-gradient(135deg, #d299c2 0%, #fef9d7 100%);
+            padding: 25px;
+            border-radius: 10px;
+        }
+
+        .strengths-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .strength-item {
+            background: linear-gradient(135deg, #89f7fe 0%, #66a6ff 100%);
+            padding: 20px;
+            border-radius: 10px;
+            color: white;
+            text-align: center;
+        }
+
+        .strength-item h4 {
+            margin-bottom: 10px;
+            font-size: 1.1em;
+        }
+
+        .highlight {
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            font-weight: bold;
+        }
+
+        .cta {
+            text-align: center;
+            margin-top: 30px;
+            padding: 20px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border-radius: 10px;
+            font-size: 1.2em;
+        }
+
+        @media (max-width: 768px) {
+            .intro-content, .academic-grid, .motivation-grid, .strengths-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .slide {
+                padding: 20px;
+                margin: 15px 0;
+            }
+            
+            .slide h1 {
+                font-size: 2em;
+            }
+            
+            .slide h2 {
+                font-size: 1.5em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Slide 1: Introduction -->
+        <div class="slide">
+            <h1>TAHA NASREDDINE KERROUM</h1>
+            <div class="intro-content">
+                <div class="intro-text">
+                    <h3>3rd Year Computer Engineering Student</h3>
+                    <p><strong>Specialization:</strong> Artificial Intelligence</p>
+                    <p style="margin-top: 15px; font-size: 1.1em; line-height: 1.7;">
+                        Passionate about <span class="highlight">transforming data into intelligent solutions</span> that solve real-world problems. 
+                        Ready to contribute to Algeria's data science ecosystem through hands-on experience and collaborative innovation.
+                    </p>
+                </div>
+                <div class="intro-stats">
+                    <h3>Ready for Impact</h3>
+                    <div style="font-size: 1.1em; line-height: 1.8;">
+                        ✅ <strong>3 Years</strong> Computer Engineering<br>
+                        ✅ <strong>Multiple</strong> AI/Data Projects<br>
+                        ✅ <strong>Teaching</strong> & Mentorship Experience<br>
+                        ✅ <strong>Real-world</strong> Problem Solver
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 2: Academic Journey -->
+        <div class="slide">
+            <h2>🎓 Academic Journey</h2>
+            <div class="academic-grid">
+                <div class="academic-card">
+                    <h3>Core Foundation</h3>
+                    <p><strong>Computer Engineering - 3rd Year</strong></p>
+                    <p>Specializing in <span class="highlight">Artificial Intelligence</span></p>
+                    <div class="skills-container">
+                        <span class="skill-tag">C Programming</span>
+                        <span class="skill-tag">Java</span>
+                        <span class="skill-tag">Python</span>
+                        <span class="skill-tag">MIPS Assembly</span>
+                    </div>
+                </div>
+                <div class="academic-card">
+                    <h3>Self-Directed Learning</h3>
+                    <p>Proactive in expanding technical expertise beyond curriculum</p>
+                    <div class="skills-container">
+                        <span class="skill-tag">TensorFlow</span>
+                        <span class="skill-tag">PyTorch</span>
+                        <span class="skill-tag">MediaPipe</span>
+                        <span class="skill-tag">Scikit-learn</span>
+                    </div>
+                </div>
+                <div class="academic-card">
+                    <h3>Teaching & Mentorship</h3>
+                    <p>Developing communication and leadership skills by mentoring younger students</p>
+                    <ul style="margin-top: 10px; padding-left: 20px;">
+                        <li>MIPS Assembly tutorials</li>
+                        <li>Algorithm fundamentals</li>
+                        <li>C programming guidance</li>
+                        <li>Data-driven learning progress tracking</li>
+                    </ul>
+                </div>
+                <div class="academic-card">
+                    <h3>Continuous Growth</h3>
+                    <p>Committed to staying current with emerging technologies and methodologies</p>
+                    <p style="margin-top: 10px; font-style: italic;">"Learning is not just about acquiring knowledge, but about applying it to create meaningful impact."</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 3: Projects Portfolio -->
+        <div class="slide">
+            <h2>🚀 Data Science Projects</h2>
+            <div class="project-grid">
+                <div class="project-card">
+                    <h3>🤟 INARA – Sign Language Translator</h3>
+                    <div class="project-tools">Tools: MediaPipe, Scikit-learn, Python, ONNX, Kotlin</div>
+                    <p><strong>Challenge:</strong> Bridge communication gaps for the deaf community</p>
+                    <p><strong>Solution:</strong> AI-powered ASL to text translation using computer vision and machine learning</p>
+                    <p><strong>Impact:</strong> Real-time gesture recognition with mobile deployment capability</p>
+                    <p style="margin-top: 10px;"><em>Technical Achievement:</em> Successfully extracted keypoints from video data, trained classification models, and optimized for mobile deployment</p>
+                </div>
+                
+                <div class="project-card">
+                    <h3>📊 University Performance Analytics</h3>
+                    <div class="project-tools">Tools: Pandas, Matplotlib, Python</div>
+                    <p><strong>Challenge:</strong> Identify mismatches between student preferences and academic assignments</p>
+                    <p><strong>Solution:</strong> Comprehensive data analysis of grades and orientation preferences</p>
+                    <p><strong>Impact:</strong> Actionable insights for university administration to improve student-field alignment</p>
+                    <p style="margin-top: 10px;"><em>Data Skills:</em> Data cleaning, statistical analysis, visualization, and report generation</p>
+                </div>
+                
+                <div class="project-card">
+                    <h3>🎯 Educational Tools & Mentorship</h3>
+                    <div class="project-tools">Tools: Algorithm Design, Data Analysis, Educational Psychology</div>
+                    <p><strong>Approach:</strong> Data-driven educational content development</p>
+                    <p><strong>Methods:</strong> Created exercises and guides while tracking learning progress patterns</p>
+                    <p><strong>Outcome:</strong> Improved learning outcomes through personalized, analytics-informed teaching</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 4: Motivation & Value Proposition -->
+        <div class="slide">
+            <h2>💡 Why This Program & What I Bring</h2>
+            <div class="motivation-grid">
+                <div class="motivation-card">
+                    <h3>🎯 My Vision</h3>
+                    <p>Data science is the future of intelligent decision-making. Through my AI projects, I've experienced the complete data lifecycle - from collection and preprocessing to modeling and deployment.</p>
+                    <p style="margin-top: 15px;"><strong>This program offers:</strong></p>
+                    <ul style="margin-top: 10px; padding-left: 20px;">
+                        <li>Real industry challenges</li>
+                        <li>Professional mentorship</li>
+                        <li>Cross-functional collaboration</li>
+                        <li>Product deployment experience</li>
+                    </ul>
+                </div>
+                <div class="motivation-card">
+                    <h3>🇩🇿 Contributing to Algeria's Future</h3>
+                    <p>Excited to be part of building Algeria's data science ecosystem alongside Djezzy, Huawei, and MajestEYE.</p>
+                    <p style="margin-top: 15px;">Ready to create solutions that have <span class="highlight">real impact</span> on our local market and challenges.</p>
+                </div>
+            </div>
+            
+            <h3 style="margin-top: 30px; text-align: center;">What I Bring to Your Teams</h3>
+            <div class="strengths-grid">
+                <div class="strength-item">
+                    <h4>✅ Technical Foundation</h4>
+                    <p>Strong AI & coding skills mean I can contribute from Day 1</p>
+                </div>
+                <div class="strength-item">
+                    <h4>✅ Project Experience</h4>
+                    <p>Real-world projects taught me deadlines, iteration, and delivery</p>
+                </div>
+                <div class="strength-item">
+                    <h4>✅ Growth Mindset</h4>
+                    <p>Passionate learner who seeks feedback and continuously improves</p>
+                </div>
+                <div class="strength-item">
+                    <h4>✅ Team Leadership</h4>
+                    <p>Teaching experience means I'll uplift my team and communicate clearly</p>
+                </div>
+            </div>
+            
+            <div class="cta">
+                <strong>Ready to transform data into impact. Let's build Algeria's data future together!</strong>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
